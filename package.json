@@ -1,0 +1,36 @@
+{
+  "name": "graphql-mongodb",
+  "version": "1.0.0",
+  "description": "graphql-dome",
+  "main": "server.js",
+  "scripts": {
+    "start": "babel-node src/server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thb2338/Graphql-mongodb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thb2338/Graphql-mongodb/issues"
+  },
+  "homepage": "https://github.com/thb2338/Graphql-mongodb#readme",
+  "dependencies": {
+    "apollo-server-express": "^1.1.2",
+    "babel-core": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "express": "^4.16.2",
+    "express-graphql": "^0.6.11",
+    "graphql": "^0.10.3",
+    "mongoose": "^4.11.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-syntax-async-generators": "^6.13.0",
+    "babel-plugin-transform-async-generator-functions": "^6.24.1",
+    "babel-plugin-transform-regenerator": "^6.26.0"
+  }
+}
