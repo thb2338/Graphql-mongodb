@@ -17,7 +17,6 @@ import UserAddType from '../types/UserAddType'
 import UserType from '../types/UserType'
 import { User } from '../proxy'
 
-// 查询一条数据，请求方法：query={mes(id: id ){username}}
 export const mes = {
   type: UserType,
   args: {
@@ -32,7 +31,7 @@ export const mes = {
   },
 }
 
-// 分页方法，请求方法：query={mepage(options:"", page_no:1,page_items:10){username,password}}
+
 export const mepage = {
   type: new GraphQLList(UserType),
   args: {
@@ -59,7 +58,7 @@ export const mepage = {
   },
 }
 
-// 删除方法，请求方式：query={del(id: id ){username}}
+
 export const del = {
   type: UserType,
   args: {
@@ -88,8 +87,23 @@ export const add = {
     },
   },
   async resolve(_, params) {
-    console.info(params)
     const data = await User.add(params)
     return data
   },
+}
+
+export const update ={
+  type: UserType,
+  args: {
+    options: {
+      name: 'options',
+      type: new GraphQLNonNull(UserAddType)
+    }
+  },
+  async resolve(_, params, options) {
+   const id = params.options.id
+   const list = params.options
+   await User.update(id, list)
+   return ''
+  }
 }

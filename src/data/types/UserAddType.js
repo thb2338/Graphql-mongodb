@@ -8,6 +8,9 @@ import {
   export default new GraphQLInputObjectType({
     name: 'UserAddType',
     fields: {
+      id: {
+        type: GraphQLID
+      },
       username: {
         type: GraphQLString
       },

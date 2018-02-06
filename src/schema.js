@@ -4,7 +4,7 @@ import {
   GraphQLString,
 } from 'graphql'
 
-import { mes, mepage, del, add } from './data/queries/user'
+import { mes, mepage, del, add, update } from './data/queries/user'
 
 const schema = new Schema({
   query: new ObjectType({
@@ -25,8 +25,8 @@ const schema = new Schema({
   mutation: new ObjectType({
     name: 'Mutation',
     fields: {
-      del,
       add,
+      update,
     },
   }),
 })
